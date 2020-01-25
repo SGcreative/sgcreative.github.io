@@ -1,7 +1,58 @@
 <!DOCTYPE html>
 <html>
-<body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Page_Title</title>
+    <!-- <link rel="stylesheet" href="../packages/unsematnic-grid.css" />
+    <link rel="stylesheet" href="../packages/owl.carousel.min.css">
+	<link rel="stylesheet" href="../packages/owl.theme.default.min.css">
+	<link rel="stylesheet" href="../packages/magnific-popup.css" />
+    <link rel="stylesheet" href="../css/charlotte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+</head>
+
+<body id="home-page">
+
+	<include src="includes/header.html">Loading...</include>
+
+<!--  Homepage  -->
+<main>
+
 	<h1>Hello World</h1>
 	<P>Sam's portfolio website</P>
+
+</main>
+<!--  End Homepage  -->
+
+<script src="../packages/jquery-3.3.1.min.js"></script>
+<!-- <script src="../packages/owl.carousel.min.js"></script>
+<script src="../packages/jquery.magnific-popup.min.js"></script> -->
+
+<script>
+// $(function() {
+//     var includes = $('[data-include]');
+//     jQuery.each(includes, function() {
+//         var file = 'includes/' + $(this).data('include') + '.html';
+//         $(this).load(file);
+//     });
+// });
+
+(() => {
+    const includes = document.getElementsByTagName('include');
+    [].forEach.call(includes, i => {
+        let filePath = i.getAttribute('src');
+        fetch(filePath).then(file => {
+            file.text().then(content => {
+                i.insertAdjacentHTML('afterend', content);
+                i.remove();
+            });
+        });
+    });
+})();
+</script>
+
 </body>
 </html>
