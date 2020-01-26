@@ -9,15 +9,16 @@
     <!-- <link rel="stylesheet" href="../packages/unsematnic-grid.css" />
     <link rel="stylesheet" href="../packages/owl.carousel.min.css">
 	<link rel="stylesheet" href="../packages/owl.theme.default.min.css">
-	<link rel="stylesheet" href="../packages/magnific-popup.css" />
-    <link rel="stylesheet" href="../css/charlotte.css">
+	<link rel="stylesheet" href="../packages/magnific-popup.css" /> -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- <link rel="stylesheet" href="../css/charlotte.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
 </head>
 
 <body id="home-page">
 
-	<div data-include="header">Loading..</div>
-	<!-- <include src="includes/header.html">Loading...</include> -->
+	<!-- <div data-include="header">Loading..</div> -->
+    <include src="includes/header.html">Loading...</include>
 
 <!--  Homepage  -->
 <main>
@@ -33,14 +34,29 @@
 <script src="../packages/jquery.magnific-popup.min.js"></script> -->
 
 <script>
+// neither work locally, both work online
+// $(function() {
+//     var includes = $('[data-include]');
+//     jQuery.each(includes, function() {
+//         var file = 'includes/' + $(this).data('include') + '.html';
+//         $(this).load(file);
+//     });
+// });
+
 $(function() {
-    var includes = $('[data-include]');
+    var includes = $('include');
     jQuery.each(includes, function() {
-        var file = 'includes/' + $(this).data('include') + '.html';
-        $(this).load(file);
+        var filePath = $(this).getAttribute('src');
+        fetch(filePath).then(file => {
+            file.text().then(content => {
+                $(this).insertAdjacentHTML('afterend', content);
+                $(this).remove();
+            });
+        });
     });
 });
 
+// This version is cleaner:
 // (() => {
 //     const includes = document.getElementsByTagName('include');
 //     [].forEach.call(includes, i => {
