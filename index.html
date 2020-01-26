@@ -46,7 +46,7 @@
 $(function() {
     var includes = $('include');
     jQuery.each(includes, function() {
-        var filePath = $(this).getAttribute('src');
+        var filePath = $(this).attr('src');
         fetch(filePath).then(file => {
             file.text().then(content => {
                 $(this).insertAdjacentHTML('afterend', content);
