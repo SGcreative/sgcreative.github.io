@@ -43,15 +43,27 @@
 //     });
 // });
 
-$(function() {
-    var includes = $('include');
-    jQuery.each(includes, function() {
-        var filePath = $(this).attr('src');
-        fetch(filePath).then(file => {
-            file.text().then(content => {
-                $(this).insertAdjacentHTML('afterend', content);
-                $(this).remove();
-            });
+// $(function() {
+//     var includes = $('include');
+//     jQuery.each(includes, function() {
+//         var filePath = $(this).attr('src');
+//         fetch(filePath).then(file => {
+//             file.text().then(content => {
+
+//                 $(this).insertAdjacentHTML('afterend', content);
+//                 $(this).remove();
+//             });
+//         });
+//     });
+// });
+
+$('include').each(function() {
+    var el = $(this);
+    var filePath = $(el).attr('src');
+    fetch(filePath).then(file => {
+        file.text().then(content => {
+            el.insertAdjacentHTML('afterend', content);
+            el.remove();
         });
     });
 });
