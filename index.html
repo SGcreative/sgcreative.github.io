@@ -58,13 +58,13 @@
 // });
 
 $('include').each(function() {
-    var el = $(this);
-    var filePath = $(el).attr('src');
+    // var el = $(this);
+    var filePath = $(this).attr('src');
     fetch(filePath).then(file => {
         file.text().then(content => {
-            $(content).insertAfter(el)
+            $(content).insertAfter(this)
             //el.insertAdjacentHTML('afterend', content);
-            el.remove();
+            $(this).remove();
         });
     });
 });
