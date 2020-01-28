@@ -62,7 +62,8 @@ $('include').each(function() {
     var filePath = $(el).attr('src');
     fetch(filePath).then(file => {
         file.text().then(content => {
-            el.insertAdjacentHTML('afterend', content);
+            $(content).insertAfter(el)
+            //el.insertAdjacentHTML('afterend', content);
             el.remove();
         });
     });
