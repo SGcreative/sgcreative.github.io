@@ -17,8 +17,7 @@
 
 <body id="home-page">
 
-	<!-- <div data-include="header">Loading..</div> -->
-    <include src="includes/header.html">Loading...</include>
+<include src="includes/header.inc">Loading...</include>
 
 <!--  Homepage  -->
 <main>
@@ -32,57 +31,7 @@
 <script src="../packages/jquery-3.3.1.min.js"></script>
 <!-- <script src="../packages/owl.carousel.min.js"></script>
 <script src="../packages/jquery.magnific-popup.min.js"></script> -->
-
-<script>
-// neither work locally, both work online
-// $(function() {
-//     var includes = $('[data-include]');
-//     jQuery.each(includes, function() {
-//         var file = 'includes/' + $(this).data('include') + '.html';
-//         $(this).load(file);
-//     });
-// });
-
-// $(function() {
-//     var includes = $('include');
-//     jQuery.each(includes, function() {
-//         var filePath = $(this).attr('src');
-//         fetch(filePath).then(file => {
-//             file.text().then(content => {
-
-//                 $(this).insertAdjacentHTML('afterend', content);
-//                 $(this).remove();
-//             });
-//         });
-//     });
-// });
-
-$('include').each(function() {
-    // var el = $(this);
-    var filePath = $(this).attr('src');
-    fetch(filePath).then(file => {
-        file.text().then(content => {
-            $(content).insertAfter(this)
-            //el.insertAdjacentHTML('afterend', content);
-            $(this).remove();
-        });
-    });
-});
-
-// This version is cleaner:
-// (() => {
-//     const includes = document.getElementsByTagName('include');
-//     [].forEach.call(includes, i => {
-//         let filePath = i.getAttribute('src');
-//         fetch(filePath).then(file => {
-//             file.text().then(content => {
-//                 i.insertAdjacentHTML('afterend', content);
-//                 i.remove();
-//             });
-//         });
-//     });
-// })();
-</script>
+<script src="../script.js"></script>
 
 </body>
 </html>
