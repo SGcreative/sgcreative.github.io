@@ -1,0 +1,651 @@
+body, html, h1, h2, h3, h4, h5, h6, p, button, input, textarea, ul {
+    margin: 0;
+    padding: 0;
+    color: #2a2a2a;
+    font-family: 'Rubik', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+}
+
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+strong {
+	font-weight: 500;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+*:focus {
+    outline: none;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+button {
+	background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+span.no-wrap {
+	white-space: nowrap;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #171717;
+}
+
+.hero::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    content: "";
+    background-color: #171717;
+    background-image: url(img/bg-pixel.jpg);
+    background-repeat: repeat;
+    opacity: .75;
+}
+
+.hero h1,
+.hero a {
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.hero h1 {
+    bottom: 50%;
+    font-size: 2.5rem;
+}
+
+.hero h1 span {
+    font-weight: 300;
+}
+
+.hero h1 span:not(:first-child) {
+	font-size: .55em;
+}
+
+.hero a {
+	bottom: 20%;
+	padding: 35px;
+	text-transform: uppercase;
+	text-decoration: none;
+	-webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    transition: color .3s ease;
+}
+
+.hero a span {
+	position: relative;
+}
+
+.hero a i {
+	position: absolute;
+	-webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    bottom: -15px;
+    -webkit-transition: bottom .3s ease;
+    -moz-transition: bottom .3s ease;
+    -o-transition: bottom .3s ease;
+    -ms-transition: bottom .3s ease;
+    transition: bottom .3s ease;
+}
+
+.hero a:hover i,
+.hero a:focus i {
+	bottom: -30px;
+}
+
+nav {
+	position: sticky;
+	top: 78px;
+	width: 100%;
+	height: 78px;
+	transform: translateY(-100%);
+	z-index: 1;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: -156px;
+}
+
+nav li {
+	list-style: none;
+	display: inline-block;
+}
+
+nav li a,
+.button {
+	text-transform: uppercase;
+    text-decoration: none;
+    color: #2a2a2a;
+    -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    transition: color .3s ease;
+}
+
+nav li a {
+	display: block;
+    padding: 30px 25px 12px;
+}
+
+.button {
+	display: inline-block;
+	padding: 30px 0 12px;
+	font-size: 1rem;
+}
+
+.button i {
+	padding-left: 12px;
+    font-size: 1.125em;
+}
+
+nav li a span,
+.button span {
+	display: block;
+	height: 3px;
+	width: 0%;
+	margin-top: 15px;
+	border-radius: .5px;
+	background-color: #22496e;
+	-webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+nav li a span {
+	background-color: #22496e;
+	-webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.button span {
+	background-color: #2d6eac;
+}
+
+nav li a:hover,
+nav li a:focus,
+.button:hover,
+.button:focus {
+	color: #2d6eac;
+}
+
+nav li a:hover span,
+nav li a:focus span {
+	background-color: #2d6eac;
+}
+
+nav li a:hover span,
+nav li a:focus span,
+nav li a.active span,
+.button:hover span,
+.button:focus span {
+	width: 100%;
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+main section {
+	margin: -75px 0 50px;
+	padding-top: 75px;
+}
+
+section .container {
+	padding: 35px 30px 0;
+}
+
+main h1 {
+	grid-column: 1/3;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 2rem;
+}
+
+main h1 span {
+	position: relative;
+	padding-bottom: 10px;
+}
+
+main h1 span::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -3px;
+	height: 3px;
+	border-radius: 1px;
+	background-color: #22496e;
+}
+
+/*** About Section ***/
+
+#about .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px 80px;
+}
+
+#about aside:first-of-type {
+	text-align: center;
+}
+
+#about aside:first-of-type div {
+	padding: 30px 25% 0;
+}
+
+#about img {
+	border-radius: 100%;
+}
+
+#about h2 {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.percent-bars {
+	margin-bottom: 25px;
+}
+
+.percent-bars div {
+	background-color: #e7ebee;
+	border-radius: 2px;
+}
+
+.percent-bars p {
+	color: #fff;
+}
+
+.percent-bars div p {
+	box-sizing: border-box;
+	height: 40px;
+    margin-bottom: 10px;
+    background-color: #22496e;
+    border-radius: 2px 0 0px 2px;
+    overflow: hidden;
+    -webkit-transition: width .75s ease-out;
+    -moz-transition: width .75s ease-out;
+    -o-transition: width .75s ease-out;
+    -ms-transition: width .75s ease-out;
+    transition: width .75s ease-out;
+}
+
+.percent-bars div i {
+	display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    width: 24px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.percent-bars div span:first-of-type {
+    display: inline-block;
+    font-size: .75rem;
+}
+
+.percent-90 p {
+	width: 90%;
+}
+
+.percent-80 p {
+	width: 80%;
+}
+
+.percent-70 p {
+	width: 70%;
+}
+
+.percent-60 p {
+	width: 60%;
+}
+
+.percent-50 p {
+	width: 50%;
+}
+
+.percent-bars .collapsed {
+	width: 44px !important;
+}
+
+/*** Portfolio Section ***/
+
+#portfolio>div {
+	padding-bottom: 30px;
+	background-color: #f1f4f6;
+}
+
+#portfolio .container>div {
+	padding-top: 40px;
+	text-align: center;
+}
+
+#portfolio .container>div>p {
+	margin: 10px 20% 20px;
+}
+
+#portfolio ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 30px;
+	list-style: none;
+}
+
+#portfolio li a {
+	height: 100%;
+	text-decoration: none;
+}
+
+#portfolio li a div:first-child {
+	position: relative;
+}
+
+#portfolio li a div:first-child::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0;
+	-webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+
+#portfolio li a:hover div:first-child::after,
+#portfolio li a:focus div:first-child::after {
+	opacity: .35;
+}
+
+#portfolio img {
+	display: block;
+	width: 100%;
+	border-radius: 2px;
+}
+
+#portfolio li a div:last-child {
+	padding: 15px 0;
+    text-align: left;
+}
+
+#portfolio li a h3,
+#portfolio li a p {
+	padding: 5px;
+}
+
+#portfolio li a h3 {
+	color: #22496e;
+}
+
+#portfolio li a p {
+	font-size: .9rem;
+}
+
+#portfolio .disclaimer {
+	display: block;
+	padding-top: 20px;
+	font-size: .8rem;
+	font-weight: 300;
+}
+
+#contact form {
+	width: 70%;
+	margin: 0 auto;
+}
+
+#contact form label {
+	font-weight: 300;
+}
+
+#contact form input,
+#contact form textarea {
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #e7ebee;
+	border: 2px solid #e7ebee;
+	border-radius: 2px;
+	height: 34px;
+	padding: 10px;
+	font-size: 16px;
+	-webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#contact form input {
+	height: 36px;
+	margin: 5px 0 25px;
+}
+
+#contact form textarea {
+	height: 120px;
+	margin-top: 5px;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+	background-color: #f1f4f6;
+	border-color: #2d6eac;
+}
+
+#contact form div {
+	text-align: right;
+	padding-right: 10px;
+}
+
+footer {
+	padding: 10px 30px;
+	text-align: center;
+	border-top: 2px solid #e0e0e0;
+	background-color: #efefef;
+}
+
+footer p {
+	display: inline-block;
+	vertical-align: middle;
+}
+footer a {
+	display: block;
+	padding: 10px;
+	margin-left: -10px;
+	color: #22496e;
+	-webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    -ms-transition: color .3s ease;
+    transition: color .3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+	color: #2d6eac;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+	.hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero a {
+    	font-size: .9rem;
+    }
+
+	nav {
+		height: 60px;
+		top: 60px;
+		margin-bottom: -120px;
+	}
+
+	nav li a {
+		padding: 20px 10px 10px;
+	}
+
+	nav li a span {
+		margin-top: 8px;
+	}
+
+	main section {
+		margin-top: -58px;
+		padding-top: 58px;
+	}
+
+	main h1 {
+		padding: 10px 0;
+		font-size: 1.75rem;
+	}
+
+	main h2 {
+		font-size: 1.4rem;
+	}
+
+	#portfolio .container>div>p {
+		margin: 10px 0 20px;
+	}
+
+	#portfolio ul {
+	    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+
+	#contact form {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+    #about {
+    	margin-bottom: 35px;
+    }
+
+    #about aside {
+    	grid-column: 1/3;
+    }
+
+    #about aside:first-of-type div {
+		padding-top: 10px;
+	}
+
+	#about aside:last-of-type > div:last-child {
+		text-align: center;
+	}
+
+    #about a {
+    	margin-top: 25px;
+		padding: 10px 16px 10px 20px;
+		border: 2px solid #2d6eac;
+		border-radius: 2px;
+    }
+
+    #about a span {
+    	display: none;
+    }
+
+    #contact form {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 460px) {
+
+	.hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero a {
+    	font-size: .85rem;
+    }
+
+	nav {
+		height: 45px;
+		top: 45px;
+		margin-bottom: -90px;
+	}
+
+	nav li a {
+		padding: 15px 10px 5px;
+		font-size: .9rem;
+	}
+
+	nav li a span {
+		height: 2px;
+		margin-top: 4px;
+	}
+
+	main section {
+		margin-top: -42px;
+		padding-top: 42px;
+	}
+
+	main h1 {
+		padding: 0;
+		font-size: 1.5rem;
+	}
+
+	main h2 {
+		font-size: 1.25rem;
+	}
+
+	p {
+		font-size: .9rem;
+	}
+
+	#portfolio li a h3 {
+		padding: 0 5px;
+	}
+
+	#contact form {
+		width: 100%;
+	}
+}

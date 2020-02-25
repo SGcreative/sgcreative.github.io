@@ -5,33 +5,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Page_Title</title>
-    <!-- <link rel="stylesheet" href="../packages/unsematnic-grid.css" />
-    <link rel="stylesheet" href="../packages/owl.carousel.min.css">
-	<link rel="stylesheet" href="../packages/owl.theme.default.min.css">
-	<link rel="stylesheet" href="../packages/magnific-popup.css" /> -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <!-- <link rel="stylesheet" href="../css/charlotte.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+    <meta name="robots" content="noindex,nofollow">
+    <title>Sam Gray | Web Developer</title>
+    <script src="packages/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c169e608e2.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,500&display=swap" rel="stylesheet">
 </head>
 
-<body id="home-page">
+<body>
 
-<include src="includes/header.inc">Loading...</include>
+<section id="hero" class="hero">
+    <canvas id="demo-canvas"></canvas>
+    <h1><span>Hi, I&rsquo;m</span> Sam.<br />
+        <span>front end web developer</span></h1>
+        <a href="#portfolio"><span>See My Work<br /><i class="fas fa-chevron-down" aria-hidden="true"></i></span></a>
+</section>
 
-<!--  Homepage  -->
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#about">About<span aria-hidden="true"></span></a></li>
+            <li><a href="#portfolio">Portfolio<span aria-hidden="true"></span></a></li>
+            <li><a href="#contact">Contact<span aria-hidden="true"></span></a></li>
+        </ul>
+    </div>
+</nav>
+
 <main>
 
-	<h1>Hello World</h1>
-	<P>Sam's portfolio website</P>
+<section id="about">
+    <div class="container">
+        <h1><span>About</span></h1>
+        <aside>
+            <div>
+                <img src="img/profile.jpg" width="280" height="280" alt="Sam Gray" />
+            </div>
+            <h2>Let me introduce myself</h2>
+            <p>I&rsquo;m Sam, a front-end developer and designer. After working as a graphic designer in the printing industry for many years, I became interested in designing and building websites. What started as a simple curiosity led me to gain the knowledge and experience necessary to totally pivot my career. Now I&rsquo;m a full-time front-end web developer with a passion for creative design that is both visually pleasing and functional.</p>
+        </aside>
+        <aside>
+            <h2>My Skills</h2>
+            <div class="percent-bars">
+                <div class="percent-90"><p><i class="fab fa-html5" aria-hidden="true"></i><span>HTML</span><span class="hidden">HTML 90%</span></p></div>
+                <div class="percent-90"><p><i class="fab fa-css3-alt" aria-hidden="true"></i><span>CSS</span><span class="hidden">CSS 90%</span></p></div>
+                <div class="percent-70"><p><i class="fab fa-js" aria-hidden="true"></i><span>JavaScript</span><span class="hidden">JavaScript 70%</span></p></div>
+                <div class="percent-50"><p><i class="fab fa-angular" aria-hidden="true"></i><span>Angular</span><span class="hidden">Angular 50%</span></p></div>
+                <div class="percent-80"><p><i class="fab fa-adobe" aria-hidden="true"></i><span>Adobe CC</span><span class="hidden">Adobe CC 80%</span></p></div>
+            </div>
+            <div>
+                <p>My day-to-day typically consists of authoring semantic HTML, writing responsive CSS and some presentational JavaScript. I often find myself sorting through ajax JSON data and writing JavaScript to build more dynamic pages. I&rsquo;ve also used AngularJS on a handful of these single page apps and have learned quite a bit. I&rsquo;ve been working with the Adobe suite since my graphic design days and recently have been enjoying XD for mockups.</p>
+                <a class="button" href="/sam-gray-resume-2020-02.pdf">Resume <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div>
+        <div class="container">
+            <h1><span>Portfolio</span></h1>
+            <div>
+                <h2>Website Pre-design Themes <span class="no-wrap">for MicroD</span></h2>
+                <p>These pre-design themes are used as templates for most clients who purchase a website package from MicroD. While being unique and visually striking, a successful theme needs to be versatile, and easily customizable to suit a wide range of clients&rsquo; needs.</p>
+                <ul>
+                    <li>
+                        <a href="/savannah/index.html">
+                            <div>
+                                <img src="img/savannah.jpg" width="380" height="300" alt="Savannah Theme" />
+                            </div>
+                            <div>
+                                <h3>"Savannah"</h3>
+                                <p><strong>Clean and simple with a little pop.</strong> That was the goal here on my most recent theme design.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/charlotte/index.html">
+                            <div>
+                                <img src="img/charlotte.jpg" width="380" height="300" alt="Charlotte Theme" />
+                            </div>
+                            <div>
+                                <h3>"Charlotte"</h3>
+                                <p><strong>A longstanding customer favorite,</strong> "Charlotte" was the best-selling website theme of 2019.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/boston/index.html">
+                            <div>
+                                <img src="img/boston.jpg" width="380" height="300" alt="Boston Theme" />
+                            </div>
+                            <div>
+                                <h3>"Boston"</h3>
+                                <p><strong>With its playful, engaging animations and eccentric color scheme,</strong> "Boston" delivers a hip attitude while still being friendly and inviting.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Websites for <span class="no-wrap">MicroD Clients*</span></h2>
+                <p>Custom sites that I designed and built while working for MicroD. These are all live, production websites that are generating business for our satisfied clients.</p>
+                <ul>
+                    <li>
+                        <a href="https://www.critellimodernfurniture.com/" target="_blank">
+                            <div>
+                                <img src="img/critelli.jpg" width="380" height="300" alt="Critelli Modern" />
+                            </div>
+                            <div>
+                                <h3>Critelli Modern</h3>
+                                <p>Quite possibly my favorite site that I&rsquo;ve built. This client has excellent taste and wanted something fashionable and contemporary to unveil their new, high-end "Modern" division.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.corsicanamattress.com/" target="_blank">
+                            <div>
+                                <img src="img/corsicana.jpg" width="380" height="300" alt="Corsicana Mattress" />
+                            </div>
+                            <div>
+                                <h3>Corsicana Mattress</h3>
+                                <p>A suite of six websites showcasing their various sub-brands, all interlinking and leading back to the main Corsicana site which houses most of the content pages.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.furnishnc.com/" target="_blank">
+                            <div>
+                                <img src="img/furnish.jpg" width="380" height="300" alt="Furnish" />
+                            </div>
+                            <div>
+                                <h3>Furnish</h3>
+                                <p>When I saw the Furnish logo, I was instantly excited to be a part of this project. I knew it was going to be a clean, airy layout with just enough bright green to make it interesting.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <span class="disclaimer">*While I did the initial design, build and implementation, these sites are maintained by MicroD and I&rsquo;m not fully responsible for ongoing edits.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div>
+        <h1><span>Contact</span></h1>
+        <div class="container">
+            <form action="https://formspree.io/myyjeknj" method="POST">
+                <label>
+                    Name:
+                    <input type="text" name="name" tabindex="1" />
+                </label>
+                <label>
+                    Email:
+                    <input type="text" name="_replyto" tabindex="2" />
+                </label>
+                <label>
+                    Message:
+                    <textarea name="message" tabindex="3"></textarea>
+                </label>
+                <div>
+                    <button class="button" type="submit" tabindex="4">Send <i class="fab fa-telegram-plane"></i>
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
 
 </main>
-<!--  End Homepage  -->
 
-<script src="../packages/jquery-3.3.1.min.js"></script>
-<!-- <script src="../packages/owl.carousel.min.js"></script>
-<script src="../packages/jquery.magnific-popup.min.js"></script> -->
-<script src="../script.js"></script>
+<footer>
+    <p><a href="https://www.linkedin.com/in/sam-gray-2408922b/" target="_blank"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i><span class="hidden">LinkedIn</span></a></p>
+    <p>Samuel Gray <span>&copy; <script>document.write(new Date().getFullYear())</script></span></p>
+</footer>
 
 </body>
 </html>
+
+<script src="script.js"></script>
+<script src="packages/TweenLite.min.js"></script>

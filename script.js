@@ -1,23 +1,27 @@
-$('include').each(function() {
-    var filePath = $(this).attr('src');
-    fetch(filePath).then(file => {
-        file.text().then(content => {
-            $(content).insertAfter(this)
-            $(this).remove();
-        });
-    });
+$(document).ready(function() {
+    $('.percent-bars p').addClass('collapsed');
 });
 
-// Vanilla version:
-// (() => {
-//     const includes = document.getElementsByTagName('include');
-//     [].forEach.call(includes, i => {
-//         let filePath = i.getAttribute('src');
-//         fetch(filePath).then(file => {
-//             file.text().then(content => {
-//                 i.insertAdjacentHTML('afterend', content);
-//                 i.remove();
-//             });
-//         });
-//     });
-// })();
+$(window).on('load, resize, scroll', function() {
+    var scrollMid = $(window).scrollTop() + ($(window).innerHeight() / 2);
+    var scrollLow = $(window).scrollTop() + ($(window).innerHeight() / 1.3);
+
+    $('section').each(function() {
+        var id = $(this).attr('id');
+        if (scrollMid > $(this).offset().top) {
+            $('nav a').removeClass('active');
+            $('nav a[href*=' + id +']').addClass('active');
+        }
+    });
+
+    if (scrollLow > $('.percent-bars').offset().top) {
+        $('.percent-bars p').removeClass('collapsed');
+    }
+
+});
+
+$('nav a, .hero a').click(function() {
+    console.log($(this).attr('href'));
+    var sectionId = $(this).attr('href');
+    $('html, body').animate({ scrollTop: $(sectionId).offset().top }, 800);
+});
