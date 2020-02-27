@@ -395,9 +395,9 @@ main h1 span::after {
 	content: "";
 	position: absolute;
 	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 	background-color: #fff;
 	opacity: 0;
 	-webkit-transition: opacity .3s ease;
@@ -588,15 +588,29 @@ footer a:focus {
 		text-align: center;
 	}
 
-    #about a {
-    	margin-top: 25px;
-		padding: 10px 16px 10px 20px;
-		border: 2px solid #2d6eac;
-		border-radius: 2px;
-    }
-
     #about a span {
     	display: none;
+    }
+
+    .percent-bars {
+    	width: 80%;
+    	margin: 0 auto 25px;
+    }
+
+    .percent-bars div p {
+    	height: 26px;
+    }
+
+    .percent-bars div i {
+    	padding: 3px;
+    	width: 20px;
+    	height: 20px;
+    	line-height: 20px;
+    	font-size: 1rem;
+    }
+
+    .percent-bars div span:first-of-type {
+    	font-size: .6rem;
     }
 
     #contact form {
@@ -647,6 +661,18 @@ footer a:focus {
 	p {
 		font-size: .9rem;
 	}
+
+	.percent-bars {
+    	width: 70%;
+    }
+
+    .percent-bars div p {
+    	height: 24px;
+    }
+
+    .percent-bars div i {
+    	padding: 2px;
+    }
 
 	#portfolio li a h3 {
 		padding: 0 5px;
