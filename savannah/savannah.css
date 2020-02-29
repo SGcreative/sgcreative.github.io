@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, p, ul, body, html {
 }
 
 h1, h2, h3, h4, h5, h6, p, a, input {
-	font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #222;
 }
 
@@ -69,14 +69,14 @@ h1, h2, h3, h4, h5, h6, p, a, input {
 }
 
 main {
-	padding: 20px 4vw;
+    padding: 20px 4vw;
     border-top-width: 0px;
     border-top-style: solid;
     border-top-color: #fff;
 }
 
 #homepage {
-	padding: 0;
+    padding: 0;
     border-top-color: #e8e5e3;
 }
 
@@ -117,17 +117,17 @@ header {
 }
 
 #header-left {
-	float: left;
+    float: left;
     width: 60%;
 }
 
 #header-right {
-	float: right;
+    float: right;
 }
 
 header a {
-	text-decoration: none;
-	-webkit-transition: color .2s ease-in-out;
+    text-decoration: none;
+    -webkit-transition: color .2s ease-in-out;
     -moz-transition: color .2s ease-in-out;
     -o-transition: color .2s ease-in-out;
     -ms-transition: color .2s ease-in-out;
@@ -138,16 +138,16 @@ header a {
 #logo img,
 #menu-toggle a,
 #menu-toggle div span {
-	display: block;
+    display: block;
 }
 
 #logo a {
     margin-right: 20px;
-	padding: 10px;
+    padding: 10px;
 }
 
 #logo a img {
-	max-width: 100%;
+    max-width: 100%;
     height: auto;
     -webkit-transition: opacity .2s ease-in-out;
     -moz-transition: opacity .2s ease-in-out;
@@ -161,19 +161,19 @@ header a {
 }
 
 #header-left div {
-	display: inline-block;
-	vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #menu-toggle a {
-	padding: 15px 25px;
+    padding: 15px 25px;
 }
 
 #menu-toggle a > span {
-	margin: 10px;
-	vertical-align: middle;
-	font-size: 1.25rem;
-	text-transform: uppercase;
+    margin: 10px;
+    vertical-align: middle;
+    font-size: 1.25rem;
+    text-transform: uppercase;
 }
 
 #menu-toggle a > span:first-child {
@@ -181,7 +181,7 @@ header a {
 }
 
 #menu-toggle a:hover div span {
-	background-color: #888;
+    background-color: #888;
 }
 
 /*** Animated Hamburger ***/
@@ -310,13 +310,13 @@ header a {
 }
 
 #header-right > ul > li {
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
 }
 
 #header-right a {
-	display: block;
+    display: block;
 }
 
 #header-right li>a:hover {
@@ -332,18 +332,18 @@ header a {
 }
 
 #header-right > ul > li:nth-child(n+2) > a {
-	padding: 8px 5px;
-	font-size: .85rem;
+    padding: 8px 5px;
+    font-size: .85rem;
 }
 
 .sub-nav ul,
 .sub-nav>div>div {
-	visibility: hidden;
-	position: absolute;
-	right: -180px;
-	background-color: #fcfaf9;
-	padding: 30px;
-	-webkit-transition: right .3s ease, visibility 0s .3s;
+    visibility: hidden;
+    position: absolute;
+    right: -180px;
+    background-color: #fcfaf9;
+    padding: 30px;
+    -webkit-transition: right .3s ease, visibility 0s .3s;
     -moz-transition: right .3s ease, visibility 0s .3s;
     -o-transition: right .3s ease, visibility 0s .3s;
     -ms-transition: right .3s ease, visibility 0s .3s;
@@ -352,8 +352,8 @@ header a {
 
 .sub-nav ul a {
     position: relative;
-	padding: 0 10px;
-	line-height: 2;
+    padding: 0 10px;
+    line-height: 2;
     white-space: nowrap;
 }
 
@@ -383,8 +383,8 @@ header a {
 }
 
 #header-right li.sub-nav li {
-	display: block;
-	text-align: left;
+    display: block;
+    text-align: left;
 }
 
 .sub-nav>div {
@@ -704,8 +704,13 @@ header a {
 #category-tiles {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    grid-gap: 3vw;
+    grid-gap: 0 20px;
+    grid-gap: 0 3vw;
+}
+
+#category-tiles>div {
+    margin-bottom: 20px;
+    margin-bottom: 3vw;
 }
 
 .home-title,
@@ -774,6 +779,7 @@ header a {
 
 .category-list {
     padding: 10% 10% 10px;
+    overflow: hidden;
 }
 
 .promo-content {
@@ -1098,6 +1104,78 @@ footer i {
 }
 
 /*** END FOOTER *******************************************************/
+
+/*** IE 11 CSS Grid ***/
+@media screen and (min-width: 768px) {
+
+    #category-tiles {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 3vw 1fr;
+    }
+
+    .category-tile {
+        display: -ms-grid;
+    }
+
+    .tile-full-left,
+    .tile-full-right,
+    .home-title {
+        -ms-grid-column-span: 3;
+    }
+
+    .tile-full-left {
+        -ms-grid-columns: 2fr 1fr;
+    }
+
+    .tile-full-right {
+        -ms-grid-columns: 1fr 2fr;
+    }
+
+    .tile-half-left {
+        -ms-grid-columns: 2fr 3fr;
+    }
+
+    .tile-half-right {
+        -ms-grid-columns: 3fr 2fr;
+    }
+
+    .category-tile>div:last-child {
+        -ms-grid-column: 2;
+    }
+
+    #category-tiles>.tile-half-left:nth-child(even),
+    #category-tiles>.tile-half-right:nth-child(even) {
+        -ms-grid-column: 3;
+    }
+
+    #category-tiles>div:nth-child(2) {
+        -ms-grid-row: 2;
+    }
+
+    #category-tiles>div:nth-child(3) {
+        -ms-grid-row: 3;
+    }
+
+    #category-tiles>div:nth-child(4) {
+        -ms-grid-row: 4;
+    }
+
+    #category-tiles>div:nth-child(5),
+    #category-tiles>div:nth-child(6) {
+        -ms-grid-row: 5;
+    }
+
+    #category-tiles>div:nth-child(7),
+    #category-tiles>div:nth-child(8) {
+        -ms-grid-row: 6;
+    }
+
+    #category-tiles>div:nth-child(9),
+    #category-tiles>div:nth-child(10) {
+        -ms-grid-row: 7;
+    }
+}
+/*** END IE 11 CSS Grid ***/
 
 @media screen and (min-width: 768px) {
 

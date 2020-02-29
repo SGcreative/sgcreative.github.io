@@ -78,19 +78,20 @@ $(document).ready(function() {
     });
 
     // Maximum number of items on homepage tile and brand lists
-    $('.one-col-list').each(function() {
+    $('.tile-half-left ul, .tile-half-right ul').each(function() {
         // Set maximum single column items here
         categoryLimit($(this), 5);
     });
 
-    $('.two-col-list').each(function() {
+    $('.tile-full-left ul').each(function() {
         // Set maximum double column items here
         categoryLimit($(this), 14);
     });
 
     function categoryLimit(obj, limit) {
         // Append View All link but not for brands list
-        if ($(obj).attr('id') != "HomeBrand") {
+        console.log(this);
+        if ($(obj).attr('class') != "no-limit") {
             var theUrl = $(obj).parent().siblings('a').attr('href');
             $(obj).append('<li><a href=\"' + theUrl + '\"><span>View All</span></a></li>');
         } if ($(obj).find('li').length > (limit + 1)) {
