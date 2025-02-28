@@ -25,18 +25,3 @@ $('nav a, .hero a').click(function() {
     var sectionId = $(this).attr('href');
     $('html, body').animate({ scrollTop: $(sectionId).offset().top }, 800);
 });
-
-$('.ajax-popup').magnificPopup({
-    type: 'ajax',
-    // callbacks: {
-    //     open: function() {
-    //         closeMenu();
-    //         setTimeout(function() {
-    //             $('.progress-bar span').addClass('active');
-    //         }, 100);
-    //         setTimeout(function() {
-    //             $('.ajax-popup').magnificPopup('close');
-    //         }, 4000);
-    //     }
-    // }
-});

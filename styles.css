@@ -447,16 +447,19 @@ main h1 span::after {
 	list-style: none;
 }
 
-#portfolio li a {
+#portfolio li a,
+#portfolio li > div {
 	height: 100%;
 	text-decoration: none;
 }
 
-#portfolio li a div:first-child {
+#portfolio li a div:first-child,
+#portfolio li > div div:first-child {
 	position: relative;
 }
 
-#portfolio li a div:first-child::after {
+#portfolio li a div:first-child::after,
+#portfolio li > div div:first-child::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -481,21 +484,26 @@ main h1 span::after {
 	border-radius: 2px;
 }
 
-#portfolio li a div:last-child {
+#portfolio li a div:last-child,
+#portfolio li > div div:last-child {
 	padding: 15px 0;
-    text-align: left;
+	text-align: left;
 }
 
 #portfolio li a h3,
-#portfolio li a p {
+#portfolio li a p,
+#portfolio li > div h3,
+#portfolio li > div p {
 	padding: 5px;
 }
 
-#portfolio li a h3 {
+#portfolio li a h3,
+#portfolio li > div h3 {
 	color: #22496e;
 }
 
-#portfolio li a p {
+#portfolio li a p,
+#portfolio li > div p {
 	font-size: .9rem;
 }
 
@@ -809,7 +817,8 @@ footer a:focus {
 		padding: 3px;
 	}
 
-	#portfolio li a h3 {
+	#portfolio li a h3,
+	#portfolio li > div h3 {
 		padding: 0 5px;
 	}
 
